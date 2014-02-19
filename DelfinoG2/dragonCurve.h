@@ -3,6 +3,7 @@
 #include <GL/glut.h>
 #include <iostream>
 #include <math.h>
+#include <time.h>
 using namespace std;
 
 #ifndef dragon
@@ -31,6 +32,7 @@ public:
 	dragonCurve();
 	~dragonCurve();
 
+	void spin(float);
 	void reset();
 	void append(float,float,char,short);
 	void rotate(char,short);

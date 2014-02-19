@@ -39,7 +39,6 @@ void dragonCurve::rotate(char color, short shade)
 	{
 		newX = getX(PI/2,x[j],y[j],x[pivXtemp], y[pivYtemp]);
 		newY = getY(PI/2,x[j],y[j],x[pivXtemp], y[pivYtemp]);
-		cout << numPoints << endl;
 		if(numPoints < MAX)
 		{
 			append(newX,newY,color,shade);
@@ -53,10 +52,20 @@ void dragonCurve::rotate(char color, short shade)
 	}
 }
 
+void dragonCurve::spin(float angle)
+{
+    glTranslatef(pivotX, pivotY, 0.0);
+	glRotatef(angle,0.0,0.0,1.0);
+    glTranslatef(0-pivotX, 0-pivotY, 0.0); 
+}
+
 void dragonCurve::reset()
 {
 	numPoints = 0;
 	full = false;
+	glLoadIdentity();
+	glClear(GL_COLOR_BUFFER_BIT);
+	glutSwapBuffers();
 }
 
 void dragonCurve::print()
