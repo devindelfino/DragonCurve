@@ -30,7 +30,7 @@
  *			- 'r': Changes the color scheme of the fractal to red
  *			- 'g': Changes the color scheme of the fractal to green
  *			- 'b': Changes the color scheme of the fractal to blue (default)
- *			- 's': Reverses the direction of the rotation during Hypnotize Mode
+ *			- 'c': Reverses the direction of the rotation during Hypnotize Mode
  *			- 'q': Quits the program
  *			    
  * Output: The output of the program is the Dragon Curve Fractal. Starting with a simple vertical line segment,
